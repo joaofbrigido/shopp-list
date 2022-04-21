@@ -1,0 +1,58 @@
+.login {
+  margin-top: var(--s32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: var(--s42);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--s64);
+    text-transform: uppercase;
+  }
+
+  img {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: var(--s64);
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .inputWrapp {
+    margin-bottom: var(--s24);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: var(--s08);
+    }
+
+    input {
+      padding: 12px var(--s16);
+      width: 100%;
+      background-color: white;
+      border: none;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.16);
+      border-radius: 2px;
+      outline: none;
+
+      &:focus {
+        // border: 2px solid var(--purple);
+        box-shadow: 0 0 0 2px var(--purple);
+      }
+    }
+  }
+
+  .buttonWrapp {
+    margin-top: var(--s32);
+    width: 100%;
+  }
+}

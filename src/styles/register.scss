@@ -1,0 +1,173 @@
+.register {
+  margin-top: var(--s64);
+
+  h1 {
+    font-size: var(--s32);
+    text-align: center;
+    margin-bottom: var(--s64);
+  }
+
+  .filtersWrap {
+    margin-bottom: var(--s32);
+
+    input {
+      background-color: var(--purple);
+      border: none;
+      border-radius: 2px;
+      padding: 12px var(--s16);
+      color: var(--white);
+      outline: none;
+      width: 100%;
+
+      &::placeholder {
+        color: var(--white);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 1px #845dbb;
+      }
+    }
+  }
+
+  .tableContainer {
+    max-height: 57vh;
+    overflow: auto;
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        th {
+          text-align: left;
+          padding: var(--s16);
+          border-bottom: 2px solid #818185;
+
+          &:nth-child(1) {
+            width: 65%;
+          }
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: var(--s14);
+
+            &:nth-child(2) {
+              text-align: right;
+              white-space: nowrap;
+
+              button {
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                img {
+                  max-width: 100%;
+                  width: 20px;
+                  height: 20px;
+
+                  &.active {
+                    filter: sepia(1) saturate(5) hue-rotate(90deg);
+                  }
+                }
+
+                & + button {
+                  margin-left: 12px;
+                }
+              }
+            }
+          }
+
+          & + tr {
+            border-top: 1px solid #e3e3e6;
+          }
+        }
+      }
+    }
+  }
+
+  .btnRegisterItem {
+    background-color: var(--black-100);
+    color: white;
+    font-weight: bold;
+    padding: var(--s14);
+    border: none;
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.registerItem {
+  margin-top: var(--s64);
+
+  .titleWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--s64);
+
+    button {
+      margin-right: var(--s16);
+      padding-right: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .inputWrap {
+    margin-top: var(--s20);
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: var(--s08);
+    }
+
+    input {
+      padding: 12px var(--s16);
+      width: 100%;
+      background-color: white;
+      border: none;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.16);
+      border-radius: 2px;
+      outline: none;
+
+      &:focus {
+        border: 2px solid var(--purple);
+      }
+    }
+  }
+
+  .btnWrap {
+    margin-top: var(--s32);
+  }
+
+  .btnRegister,
+  .btnDelete {
+    width: 100%;
+    padding: 12px var(--s16);
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    border-radius: 2px;
+    margin-top: var(--s16);
+    cursor: pointer;
+  }
+
+  .btnRegister {
+    background-color: var(--purple);
+  }
+  .btnDelete {
+    background-color: var(--red);
+  }
+}

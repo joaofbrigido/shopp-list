@@ -1,0 +1,132 @@
+.home {
+  margin-top: var(--s64);
+
+  h1 {
+    font-size: var(--s32);
+    text-align: center;
+    margin-bottom: var(--s64);
+  }
+
+  .categories {
+    h2 {
+      font-size: var(--s24);
+      color: var(--purple-100);
+      margin-bottom: var(--s16);
+      font-weight: 600;
+    }
+
+    ul {
+      display: flex;
+      gap: var(--s08);
+      max-width: 100%;
+      overflow-x: auto;
+      padding: 0 0 var(--s16) 0;
+
+      li {
+        background-color: var(--black-100);
+        text-align: center;
+        padding: var(--s16);
+        border-radius: 4px;
+
+        p {
+          color: var(--white);
+          white-space: nowrap;
+          margin-bottom: var(--s08);
+        }
+
+        span {
+          color: violet;
+          font-weight: bold;
+        }
+
+        &:nth-child(odd) {
+          span {
+            color: var(--purple);
+          }
+        }
+      }
+    }
+  }
+
+  .shopplist {
+    margin-top: var(--s32);
+
+    h2 {
+      font-size: var(--s24);
+      color: var(--purple-100);
+      margin-bottom: var(--s24);
+      font-weight: 600;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s08);
+
+      .noItensInList {
+        color: var(--red);
+        background: #d7befa44;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      li {
+        background-color: var(--black-100);
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--s16);
+        border-radius: 4px;
+        box-shadow: 4px 1px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+        h3 {
+          font-size: var(--s16);
+          font-weight: 400;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 0;
+            height: 1px;
+            display: inline-block;
+            background-color: var(--green);
+            position: absolute;
+            top: 10px;
+            transition: 0.25s ease;
+          }
+        }
+
+        span {
+          color: var(--purple);
+        }
+
+        .checkboxContainer {
+          display: flex;
+          align-items: center;
+
+          .checkbox {
+            width: 20px;
+            height: 20px;
+            background-color: var(--white);
+            margin-right: 12px;
+            border-radius: 2px;
+            transition: 0.25s ease;
+          }
+        }
+
+        &.checked {
+          .checkbox {
+            background-color: var(--green);
+          }
+
+          h3 {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

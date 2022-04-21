@@ -1,0 +1,14 @@
+{
+  "git.enabled": false,
+  "files.exclude": {
+    "node_modules": true,
+    ".vscode": true,
+    ".gitignore": true,
+    "package.json": false,
+    "package-lock.json": true,
+    "public": true,
+    "vite.config.ts": true,
+    "tsconfig.json": true,
+    "yarn.lock": true
+  }
+}
