@@ -232,7 +232,7 @@ export const Register = () => {
       )}
 
       {homeVisible ? (
-        <main className="register">
+        <main className="register mainContainer">
           <h1>Itens Cadastrados</h1>
 
           <div className="filtersWrap">
@@ -255,7 +255,7 @@ export const Register = () => {
               <tbody>
                 {itensFiltered.map((item) => (
                   <tr key={item.id}>
-                    <td>
+                    <td className={item.isBuyNow ? "active" : ""}>
                       {item.name} ({item.amount})
                     </td>
                     <td>
@@ -284,7 +284,7 @@ export const Register = () => {
           </button>
         </main>
       ) : registerVisible || editVisible ? (
-        <main className="registerItem">
+        <main className="registerItem mainContainer">
           <div className="titleWrap">
             <button onClick={showHome}>
               <img src={backIcon} alt="Voltar Listagem Itens" />

@@ -29,7 +29,7 @@ export const Menu = () => {
             <li className={currentPage === "/home" ? "active" : ""}>
               <a href="/home">
                 <img src={homeIcon} alt="Home" />
-                Home
+                Lista de Compras
               </a>
             </li>
             <li className={currentPage === "/cadastrar" ? "active" : ""}>

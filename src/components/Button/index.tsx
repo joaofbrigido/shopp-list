@@ -3,13 +3,12 @@ import "./styles.scss";
 
 type AuxProps = {
   children: ReactNode;
-  onClick: () => void;
   disabled?: boolean;
 };
 
-export const Button = ({ children, onClick, disabled }: AuxProps) => {
+export const Button = ({ children, disabled, ...props }: AuxProps) => {
   return (
-    <button className="button" onClick={onClick} disabled={disabled}>
+    <button className="button" disabled={disabled} {...props}>
       {children}
     </button>
   );

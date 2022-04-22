@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { Button } from "../components/Button";
 import mainIllustration from "../imgs/illustration.svg";
 import "../styles/login.scss";
@@ -13,14 +13,15 @@ export const Login = () => {
     localStorage.setItem("login", ""); // Ao deslogar limpar a sessão
   }, []);
 
-  function handleSignIn() {
+  function handleSignIn(e: FormEvent) {
+    e.preventDefault();
+
     if (
       username === import.meta.env.VITE_APP_USERNAME &&
       password === import.meta.env.VITE_APP_PASSWORD
     ) {
       setError(false);
       setSuccess(true);
-
       localStorage.setItem("login", "true");
       window.location.href = `${window.location.href}home`;
     } else {
@@ -30,7 +31,7 @@ export const Login = () => {
   }
 
   return (
-    <main className="login">
+    <main className="login mainContainer">
       <h1>Shopplist</h1>
       <img
         src={mainIllustration}
@@ -43,34 +44,31 @@ export const Login = () => {
         </p>
       )}
 
-      <div className="inputWrapp">
-        <label htmlFor="username">Usuário</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={({ target }) => setUsername(target.value)}
-        />
-      </div>
-      <div className="inputWrapp">
-        <label htmlFor="password">Senha</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={({ target }) => setPassword(target.value)}
-        />
-      </div>
-
-      <div className="buttonWrapp">
-        {success ? (
-          <Button onClick={handleSignIn} disabled>
-            ENTRANDO...
+      <form onSubmit={handleSignIn}>
+        <div className="inputWrapp">
+          <label htmlFor="username">Usuário</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={({ target }) => setUsername(target.value)}
+          />
+        </div>
+        <div className="inputWrapp">
+          <label htmlFor="password">Senha</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={({ target }) => setPassword(target.value)}
+          />
+        </div>
+        <div className="buttonWrapp">
+          <Button disabled={success}>
+            {success ? "ENTRANDO..." : "ENTRAR"}
           </Button>
-        ) : (
-          <Button onClick={handleSignIn}>ENTRAR</Button>
-        )}
-      </div>
+        </div>
+      </form>
     </main>
   );
 };

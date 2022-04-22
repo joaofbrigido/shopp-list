@@ -99,7 +99,7 @@ export const Home = () => {
     <>
       {loading && <Loader />}
 
-      <main className="home">
+      <main className="home mainContainer">
         <h1>Lista de Compras</h1>
 
         {/* <div className="categories">

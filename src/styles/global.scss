@@ -29,7 +29,7 @@
 body {
   background: #f8f7fb;
   color: #282a36;
-  padding: var(--s16);
+  padding: var(--s18);
 }
 
 body,
@@ -41,6 +41,11 @@ textarea {
 
 ul {
   list-style: none;
+}
+
+.mainContainer {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 //Modal

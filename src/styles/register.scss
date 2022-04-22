@@ -1,10 +1,9 @@
 .register {
-  margin-top: var(--s64);
-
   h1 {
     font-size: var(--s32);
     text-align: center;
     margin-bottom: var(--s64);
+    margin-top: var(--s64);
   }
 
   .filtersWrap {
@@ -81,6 +80,10 @@
                 }
               }
             }
+
+            &.active {
+              color: #18c042;
+            }
           }
 
           & + tr {
@@ -106,13 +109,12 @@
 }
 
 .registerItem {
-  margin-top: var(--s64);
-
   .titleWrap {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: var(--s64);
+    margin-top: var(--s64);
 
     button {
       margin-right: var(--s16);
