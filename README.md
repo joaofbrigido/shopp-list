@@ -12,6 +12,6 @@ Aplicação WEB de uma lista de compras no formato TO-DO | Acesse em: [shopplist
 
 ### Algumas imagens...
 
-<img align="center" alt="Home" width="583" height="583" src="./src/imgs/readme/home.png">
-<img align="center" alt="Itens Cadastrados" width="583" height="583" src="./src/imgs/readme/itensCadastrados.png">
-<img align="center" alt="Lista de Compras" width="583" height="583" src="./src/imgs/readme/listaDeCompras.png">
+<img align="center" alt="Home" width="300" height="650" src="./src/imgs/readme/home.png">
+<img align="center" alt="Itens Cadastrados" width="300" height="650" src="./src/imgs/readme/itensCadastrados.png">
+<img align="center" alt="Lista de Compras" width="300" height="650" src="./src/imgs/readme/listaDeCompras.png">
